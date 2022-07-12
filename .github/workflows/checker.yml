@@ -27,16 +27,16 @@ jobs:
         run: php -v  
       
       - name: Download php security checker
-        run: wget https://github.com/fabpot/local-php-security-checker/releases/download/v2.0.4/local-php-security-checker_2.0.4_linux_amd64
+        run: wget https://github.com/fabpot/local-php-security-checker/releases/download/v2.0.4/local-php-security-checker_2.0.4_linux_386
         
       - name: List files
         run: ls -l -a 
         
       - name: Rename file
-        run: mv local-php-security-checker_2.0.4_linux_amd64 local-php-security-checker  
+        run: mv local-php-security-checker_2.0.4_linux_386 local-php-security-checker  
         
       - name: Change file permission
-        run: chmod 0755 local-php-security-checker
+        run: chmod 755 local-php-security-checker
       
       - name: List files
         run: ls -l -a
