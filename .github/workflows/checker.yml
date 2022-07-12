@@ -1,16 +1,11 @@
 name: Security checker
 
-
 on:
   # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
-
-  # Allows you to run this workflow manually from the Actions tab
+   
   workflow_dispatch:
-
 
 jobs:
  
@@ -21,17 +16,11 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3 
-      
-      - name: Check PHP Version
-        run: php -v  
-      
+      - uses: actions/checkout@v3  
+       
       - name: Download php security checker
         run: wget https://github.com/fabpot/local-php-security-checker/releases/download/v2.0.4/local-php-security-checker_2.0.4_linux_386
-        
-      - name: List files
-        run: ls -l -a 
-        
+           
       - name: Rename file
         run: mv local-php-security-checker_2.0.4_linux_386 local-php-security-checker  
         
