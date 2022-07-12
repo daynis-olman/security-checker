@@ -42,4 +42,4 @@ jobs:
         run: ls -l -a
         
       - name: Run security check
-        run:  local-php-security-checker --path=/home/runner/work/security-checker/security-checker/composer.lock --format=json
+        run:  local-php-security-checker --path=./composer.lock --format=json
